@@ -1,0 +1,89 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    color: #111;
+    background-color: #fff;
+    margin: 0;
+}
+
+a {
+    font-family: "Open Sans", sans-serif;
+    color: unset;
+    text-decoration: none;
+}
+
+.content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.circle-wrapper {
+    position: absolute;
+    top: 0;
+}
+
+.mouse-circle {
+    position: absolute;
+    top: -12px;
+    left: -12px;
+    background-color: #111;
+    width: 12px;
+    height: 12px;
+    border-radius: 999px;
+}
+
+.anim-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    min-height: 100vh;
+    z-index: -10;
+}
+
+a:not(.no-hover-effect) {
+    text-decoration: none;
+    flex-grow: 0;
+    color: #111;
+    font-weight: 600;
+    line-height: 1.1rem;
+    margin: 2px 0;
+    padding-bottom: 0;
+    border-bottom: 2px solid #111;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+a:not(.no-hover-effect).reverse-colors {
+    color: #eee;
+    background-color: #111;
+}
+
+a:not(.no-hover-effect) .hover-elem {
+    background-color: #111;
+    position: absolute;
+    left: 0;
+    color: #eee;
+}
+
+a:not(.no-hover-effect).reverse-colors .hover-elem {
+    color: #111;
+    background-color: #eee;
+}
+
+hr {
+    color: #111;
+    border-width: 3px;
+}
+
+.footer {
+    display: flex;
+    padding: 1rem;
+    justify-content: end;
+    align-items: center;
+    gap: 1rem;
+}

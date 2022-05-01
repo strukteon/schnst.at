@@ -1,0 +1,15 @@
+{
+  "name": "schnst.at",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pug:watch": "npx pug -w ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pug-cli": "^1.0.0-alpha6"
+  }
+}

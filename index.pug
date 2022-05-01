@@ -1,0 +1,23 @@
+extends ./assets/layout/layout
+
+block append styles
+    link(rel="stylesheet" href="style.css")
+
+block append scripts
+    script(defer src="script.js")
+
+block content
+    .text-wrapper
+        h2 Hi, I'm
+        .name-wrapper
+            span Nils Schneider-Sturm
+
+        .below-name
+            p(class="keywords") motion, code, server
+
+            .links
+                a(target="_blank" href="https://www.linkedin.com/in/nils-schneider-sturm/") LinkedIn
+                a(target="_blank" href="https://github.com/strukteon/") Github
+                a(target="_blank" href="mailto:l>qaflqr,_r") Contact me
+
+            a(href="portfolio/").portfolio.reverse-colors view Portfolio

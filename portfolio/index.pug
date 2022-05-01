@@ -1,0 +1,40 @@
+extends ../assets/layout/layout
+
+block append styles
+    link(rel="stylesheet" href="style.css")
+
+block append scripts
+    script(defer src="script.js")
+
+block content
+    h1.title
+        a(href="../").no-hover-effect /
+        | &nbsp;Portfolio
+    hr
+    include projects
+    .projects: each proj in projects
+        .project
+            .left-content
+                .date
+                    .month= proj.date.month
+                    .year= proj.date.year
+                if proj.img_url
+                    img(src=proj.img_url[0])
+                else
+                    img(src="https://via.placeholder.com/400x300/eeeeee")
+            .right-content
+                .text-content
+                    h3= proj.title
+                    span.span-flex
+                        if proj.name
+                            = proj.name
+                            | &nbsp;(
+                        a(href=proj.url target="_blank")= proj.url
+                        if proj.name
+                            | )
+                    if proj.code_url
+                        span.span-flex or&nbsp;
+                            a(href=proj.code_url target="_blank") view code
+                    .technologies
+                        each tech in proj.technologies
+                            .chip= tech
