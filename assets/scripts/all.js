@@ -34,7 +34,8 @@ document.addEventListener('mouseup', function (e) {
         top: 0,
         x: e.clientX,
         y: e.clientY,
-        fill: "rgba(16, 16, 16, .3)",
+        fill: getComputedStyle(mouse_circle).backgroundColor === "rgb(17, 17, 17)" ?
+            "rgba(16, 16, 16, .3)" : "rgba(238, 238, 238, .3)",
         opacity: {.5: 0},
         radius: {6: 40},
         onComplete: function () {
@@ -68,6 +69,29 @@ links.forEach(l => {
     l.addEventListener("mouseleave", e => {
         hoverElemAnim.playBackward();
     });
+});
+
+let switchScreenLink = document.querySelectorAll("a.switch-screen");
+
+switchScreenLink.forEach(l => {
+    l.addEventListener("click", e => {
+        e.preventDefault();
+
+        new mojs.Shape({
+            parent: anim_wrapper,
+            left: 0,
+            top: 0,
+            x: e.clientX,
+            y: e.clientY,
+            fill: "rgba(16, 16, 16, 1)",
+            radius: {6: 2000},
+            easing: 'bounce.out',
+            duration: 1000,
+            onComplete: function () {
+                window.location.href = l.href;
+            }
+        }).play();
+    })
 });
 
 [...document.querySelectorAll("a[href^='mailto:']")]

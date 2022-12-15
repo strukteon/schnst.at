@@ -1,0 +1,29 @@
+extends ../../assets/layout/layout
+
+block append styles
+    link(rel="stylesheet" href="style.css")
+    link(rel="stylesheet" href="/assets/styles/dark.css")
+
+block content
+    h2.project-title Addon for Discord
+    h1.project-name MyRichPresence
+
+    p.project-description This project has a really elaborate description. Look at how it goes. Cute, isn't it?
+
+    .project-overview
+        .preview-images x
+
+        .aside
+            .fact
+                .fact-title Technologies used
+                .fact-value Java
+                .fact-value JavaFX
+                .fact-value Websocket
+
+            .fact
+                .fact-title Downloads
+                .fact-value > 180.000
+
+            .actions
+                a(href="https://github.com") visit GitHub
+                a(href="https://github.com") visit project page
