@@ -70,6 +70,7 @@ a:not(.no-hover-effect) {
 a:not(.no-hover-effect).reverse-colors {
     color: #eee;
     background-color: #111;
+    border-bottom-color: #eee;
 }
 
 a:not(.no-hover-effect) .hover-elem {
@@ -90,9 +91,20 @@ hr {
 }
 
 .footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
     display: flex;
     padding: 1rem;
     justify-content: end;
     align-items: center;
     gap: 1rem;
+}
+
+.footer .copyright {
+    font-weight: 800;
+    font-size: 1.25rem;
+    margin: 0;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, .6);
 }

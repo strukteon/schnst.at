@@ -1,29 +1,59 @@
 extends ../../assets/layout/layout
 
 block append styles
-    link(rel="stylesheet" href="style.css")
     link(rel="stylesheet" href="/assets/styles/dark.css")
+    link(rel="stylesheet" href="style.css")
 
-block content
+block append scripts 
+    script(defer src="script.js")
+
+
+block append before-content 
+    a(href="../").go-back-btn.reverse-colors Go Back
+
+block content 
+    include ../projects
+
     h2.project-title Addon for Discord
     h1.project-name MyRichPresence
 
     p.project-description This project has a really elaborate description. Look at how it goes. Cute, isn't it?
 
     .project-overview
-        .preview-images x
+        .preview-images
+            each image in proj.images
+                each device in devices
+                    if ! image.type == device.name
+                        - continue
+                    .image(
+                        style=`\
+                        --device-scale: ${image.device_scale};\
+                        --device-width: ${device.dimensions[0]}px;\
+                        --device-height: ${device.dimensions[1]}px;\
+                        --device-pos-x: ${image.device_pos[0]}px;\
+                        --device-pos-y: ${image.device_pos[1]}px;\
+                        --device-frame-pos-x: ${device.frame.pos[0]}px;\
+                        --device-frame-pos-y: ${device.frame.pos[1]}px;\
+                        --device-frame-width: ${device.frame.dimensions[0]}px;\
+                        --device-frame-height: ${device.frame.dimensions[1]}px;\
+                        --device-frame-aspect-ratio: ${device.frame.aspect_ratio};\
+                        `
+                    )
+                        img.frame(src=image.src)
+                        img.device(src=device.src)
 
         .aside
             .fact
                 .fact-title Technologies used
-                .fact-value Java
-                .fact-value JavaFX
-                .fact-value Websocket
+                .fact-value 
+                    each tech in proj.technologies 
+                        p= tech
 
-            .fact
-                .fact-title Downloads
-                .fact-value > 180.000
+            each fact in proj.facts 
+                .fact 
+                    .fact-title= fact.fact_title 
+                    .fact-value= fact.fact_value
 
             .actions
-                a(href="https://github.com") visit GitHub
-                a(href="https://github.com") visit project page
+                a(href="https://github.com").reverse-colors visit GitHub
+                a(href="https://github.com").reverse-colors visit project page

@@ -75,7 +75,6 @@ let switchScreenLink = document.querySelectorAll("a.switch-screen");
 
 switchScreenLink.forEach(l => {
     l.addEventListener("click", e => {
-        e.preventDefault();
 
         new mojs.Shape({
             parent: anim_wrapper,

@@ -1,0 +1,101 @@
+
+.go-back-btn {
+    font-weight: 800;
+    margin: 2rem !important;
+}
+
+.content {
+    max-width: 1200px;
+    margin-top: 2rem;
+}
+.project-title {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 1.75rem;
+    margin: 0;
+    line-height: 1.5rem;
+    color: rgba(255, 255, 255, .4);
+}
+
+.project-name {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 2.75rem;
+    margin: 0;
+    line-height: 2.25rem;
+}
+
+.project-description {
+    font-weight: 500;
+    color: rgba(255, 255, 255, .6);
+    font-size: 1.2rem;
+    max-width: 550px;
+}
+
+.project-overview {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.project-overview > * {
+    margin: 1rem;
+}
+
+.preview-images {
+    position: relative;
+    display: block;
+    width: 600px;
+    height: 400px;
+    border: 1px white solid;
+}
+
+.image {
+    position: absolute;
+    width: var(--device-width);
+    height: var(--device-height);
+    top: var(--device-pos-y);
+    left: var(--device-pos-x);
+    transform: scale(1) translateX(0) translateY(0);
+    transition: all 2s ease;
+}
+.image .device {
+    width: var(--device-width);
+    height: var(--device-height);
+}
+.image .frame {
+    position: absolute;
+    width: var(--device-frame-width);
+    height: var(--device-frame-height);
+    top: var(--device-frame-pos-y);
+    left: var(--device-frame-pos-x);
+}
+
+.image.focused-big {
+    transform: translateX(calc(50vw - 50%)) translateY(calc(50vh - 50%)) scale(2) !important;
+}
+.aside .fact .fact-title {
+    color: rgba(255, 255, 255, .4);
+    font-size: 1.2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.aside .fact .fact-value, .aside .fact .fact-value > * {
+    margin: 0;
+    color: rgba(255, 255, 255, .8);
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 1.5rem;
+}
+.aside .fact .fact-value {
+    transform: translateY(-12px);
+}
+
+.actions {
+    margin-top: 3rem;
+}
+.actions > * {
+    margin: 1rem !important;
+}

@@ -10,9 +10,11 @@ html
             script(defer src="https://cdnjs.cloudflare.com/ajax/libs/mo-js/0.288.2/mo.min.js")
             script(defer src="/assets/scripts/all.js")
     body
-        block anim-wrapper
-            .anim-wrapper
+        .anim-wrapper
+            block anim-wrapper
                 .mouse-circle
+
+        block before-content
 
         .content
             block content
@@ -20,5 +22,5 @@ html
 
         block footer
             footer.footer
-                span (c) Nils Schneider-Sturm 2022
+                p.copyright &copy; Nils Schneider-Sturm 2022
                 //a(href="/imprint/") Imprint

@@ -31,7 +31,17 @@
             name: "strukteon.net",
             url: "https://strukteon.net/",
             img_url: ["/portfolio/images/homepage_image1.png"],
+            images: [{
+                src: "/portfolio/images/vinoshop_image1.png",
+                type: "imac",
+                device_pos: [ 600 / 2 - 318 / 2, 400 / 2 - 281 / 2 ],
+                device_scale: 1.2,
+            }],
             technologies: ["Docker", "VueJS", "NodeJS", "ExpressJS"],
+            facts: [{
+                fact_title: "Downloads",
+                fact_value: "> 180.000"
+            }]
         },
         {
             title: "Online wineshop",
@@ -63,8 +73,23 @@
                 month: "since",
                 year: "2015"
             },
-            img_url: ["https://github-readme-stats.vercel.app/api/top-langs/?username=strukteon&bg_color=111111&title_color=eeeeee&text_color=dddddd&langs_count=10&layout=compact"],
+            img_url: ["/portfolio/images/myrpc_image1.png"],
             url: "https://github.com/strukteon",
             technologies: ["TypeScript", "Kotlin", "and more"],
         },
+    ];
+
+    var proj = projects[0]
+
+    var devices = [
+        {
+            name: "imac",
+            src: "/portfolio/images/imac.png",
+            dimensions: [ 318, 281 ],
+            frame: {
+                pos: [15, 15],
+                dimensions: [ 287, 161 ],
+                aspect_ratio: "16 / 9"
+            }
+        }
     ]
