@@ -14,8 +14,8 @@ block append before-content
 block content 
     include ../projects
 
-    h2.project-title Addon for Discord
-    h1.project-name MyRichPresence
+    h2.project-title= proj.title
+    h1.project-name= proj.name
 
     p.project-description This project has a really elaborate description. Look at how it goes. Cute, isn't it?
 
@@ -23,7 +23,7 @@ block content
         .preview-images
             each image in proj.images
                 each device in devices
-                    if ! image.type == device.name
+                    if image.type != device.name
                         - continue
                     .image(
                         style=`\

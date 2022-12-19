@@ -4,6 +4,14 @@
     margin: 2rem !important;
 }
 
+.anim-wrapper {
+    backdrop-filter: blur(0px) opacity(0);
+    transition: all .5s ease;
+}
+.anim-wrapper.overlay {
+    backdrop-filter: blur(4px) opacity(1);
+}
+
 .content {
     max-width: 1200px;
     margin-top: 2rem;
@@ -57,11 +65,12 @@
     top: var(--device-pos-y);
     left: var(--device-pos-x);
     transform: scale(1) translateX(0) translateY(0);
-    transition: all 2s ease;
+    transition: all .5s ease;
 }
 .image .device {
     width: var(--device-width);
     height: var(--device-height);
+    position: absolute;
 }
 .image .frame {
     position: absolute;
@@ -73,6 +82,8 @@
 
 .image.focused-big {
     transform: translateX(calc(50vw - 50%)) translateY(calc(50vh - 50%)) scale(2) !important;
+    top: 0 !important;
+    left: 0 !important;
 }
 .aside .fact .fact-title {
     color: rgba(255, 255, 255, .4);

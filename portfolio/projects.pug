@@ -32,11 +32,17 @@
             url: "https://strukteon.net/",
             img_url: ["/portfolio/images/homepage_image1.png"],
             images: [{
-                src: "/portfolio/images/vinoshop_image1.png",
+                src: "/portfolio/images/gradient.jpg",
                 type: "imac",
                 device_pos: [ 600 / 2 - 318 / 2, 400 / 2 - 281 / 2 ],
                 device_scale: 1.2,
-            }],
+            },{
+                src: "/portfolio/images/gradient.jpg",
+                type: "iphone",
+                device_pos: [ 600 / 2 - 318 / 2, 400 / 2 - 281 / 2 ],
+                device_scale: 1.2,
+            },
+            ],
             technologies: ["Docker", "VueJS", "NodeJS", "ExpressJS"],
             facts: [{
                 fact_title: "Downloads",
@@ -91,5 +97,15 @@
                 dimensions: [ 287, 161 ],
                 aspect_ratio: "16 / 9"
             }
-        }
+        },
+        {
+            name: "iphone",
+            src: "/portfolio/images/iphone.png",
+            dimensions: [ 90, 183 ],
+            frame: {
+                pos: [4, 3],
+                dimensions: [ 85 - 4, 179 - 3  ],
+                aspect_ratio: "16 / 9"
+            }
+        },
     ]
