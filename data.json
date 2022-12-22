@@ -26,9 +26,80 @@
             ],
             "technologies": ["docker", "vuejs", "nodejs", "expressjs"],
             "facts": [{
+                "title": "Vistors in last year",
+                "value": "~ 500.000"
+            }]
+        },
+        {
+            "title": "Online wineshop",
+            "path": "online-wineshop",
+            "date": {
+                "month": "2021 -",
+                "year": "2022"
+            },
+            "name": "Vinoshop",
+            "preview_img_url": "/portfolio/images/vinoshop_image1.png",
+            "images": [
+                {
+                    "src": "/portfolio/images/gradient.jpg",
+                    "type": "imac",
+                    "device_pos": [ 141, 60 ],
+                    "device_scale": 1.2
+                },{
+                    "src": "/portfolio/images/gradient.jpg",
+                    "type": "iphone",
+                    "device_pos": [ 100, 150 ],
+                    "device_scale": 1.2
+                }
+            ],
+            "url": "https://vinoshop.at",
+            "technologies": ["php", "javascript", "shopware", "symfony"],
+            "facts": [{
+                "title": "Customers",
+                "value": "~ 20"
+            }]
+        },
+        {
+            "title": "Addon for Discord",
+            "path": "addon-for-discord",
+            "date": {
+                "month": "February",
+                "year": "2018"
+            },
+            "name": "MyRichPresence",
+            "preview_img_url": "/portfolio/images/myrpc_image1.png",
+            "images": [
+                {
+                    "src": "/portfolio/images/gradient.jpg",
+                    "type": "imac",
+                    "device_pos": [ 141, 60 ],
+                    "device_scale": 1.2
+                },{
+                    "src": "/portfolio/images/gradient.jpg",
+                    "type": "iphone",
+                    "device_pos": [ 100, 150 ],
+                    "device_scale": 1.2
+                }
+            ],
+            "url": "https://strukteon.net/projects",
+            "code_url": "https://github.com/strukteon/MyRichPresence",
+            "technologies": ["java", "javafx"],
+            "facts": [{
                 "title": "Downloads",
                 "value": "> 180.000"
             }]
+        },
+        {
+            "title": "More Projects on",
+            "name": "GitHub",
+            "date": {
+                "month": "since",
+                "year": "2015"
+            },
+            "preview_img_url": "/portfolio/images/myrpc_image1.png",
+            "url": "https://github.com/strukteon",
+            "is_link": true,
+            "technologies": ["typescript", "kotlin", "and more"]
         }
     ],
     "devices": [

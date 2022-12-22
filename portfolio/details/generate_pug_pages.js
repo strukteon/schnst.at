@@ -6,6 +6,8 @@ const fs = require("fs");
 const compiledFunction = pug.compileFile(__dirname + '/index.pug');
 
 for (let proj of data["projects"]) {
+    if (proj["is_link"]) continue;
+    
     if (!fs.existsSync(__dirname + `./${proj.path}`)){
         fs.mkdirSync(__dirname + `/${proj.path}`, { recursive: true });
     }

@@ -14,7 +14,8 @@ block content
 
 
     .projects: each proj in projects
-        a(href="details/" + proj.path).project.no-hover-effect.screen-transition
+        - let href_url = proj["is_link"] ? proj.url : "details/" + proj.path
+        a(href=href_url).project.no-hover-effect.screen-transition
             if proj.preview_img_url
                 img(src=proj.preview_img_url).background-image
             else
