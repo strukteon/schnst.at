@@ -1,24 +1,21 @@
 let previewImagesDiv = document.querySelector(".preview-images");
 let previewImages = document.querySelectorAll(".preview-images .image");
 let imageOverlay = document.querySelector(".image-overlay");
-
-let previewImagesClones = []
-
 previewImages.forEach(image => {
-    let clone = image.cloneNode(true);
-    previewImagesClones.push(clone)
-    let maxHeight = 0.9;
     image.addEventListener("click", e => {
         let boundingRect = image.getBoundingClientRect();
 
-        
-        document.body.appendChild(clone);
-        setImageClonePos(image, clone, 0);
-        clone.style.position = "fixed";
-
-        return;
         if (! image.classList.contains("focused-big")) {
-            
+            image.setAttribute("data-index", Array.from(previewImagesDiv.children).indexOf(image));
+            imageOverlay.classList.add("visible")
+            imageOverlay.style.zIndex = "10";
+            imageOverlay.appendChild(image);
+            image.style.zIndex = "10";
+            image.style.position = "absolute";
+            image.style.top = boundingRect.top + "px";
+            image.style.left = boundingRect.left + "px";
+            image.style.setProperty("--zoom-factor", (window.innerHeight * .9) / boundingRect.height)
+            setTimeout(() => image.classList.add("focused-big"), 10);
         } else {
             image.classList.remove("focused-big");
             anim_wrapper.classList.remove("visible");
@@ -34,13 +31,3 @@ previewImages.forEach(image => {
         }
     })
 })
-
-
-let tween = (start, end, progress) => start + (end - start) * progress;
-
-function setImageClonePos(orig, clone, progress) {
-    let boundingRect = orig.getBoundingClientRect();
-    let max_scale = (window.innerHeight * .9) / boundingRect.height;
-    clone.style.top = tween(boundingRect.top, window.innerHeight / 2 - boundingRect.height * max_scale / 2)  + "px";
-    clone.style.left = boundingRect.left + "px";
-}

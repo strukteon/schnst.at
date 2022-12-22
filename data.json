@@ -1,3 +1,88 @@
 {
-    
+    "projects": [
+        {
+            "title": "Personal Homepage",
+            "name": "strukteon.net",
+            "path": "personal-homepage",
+            "description": "",
+            "date": {
+                "month": "August",
+                "year": "2020"
+            },
+            "url": "https://strukteon.net",
+            "preview_img_url": "/portfolio/images/homepage_image1.png",
+            "images": [
+                {
+                    "src": "/portfolio/images/gradient.jpg",
+                    "type": "imac",
+                    "device_pos": [ 141, 60 ],
+                    "device_scale": 1.2
+                },{
+                    "src": "/portfolio/images/gradient.jpg",
+                    "type": "iphone",
+                    "device_pos": [ 100, 150 ],
+                    "device_scale": 1.2
+                }
+            ],
+            "technologies": ["docker", "vuejs", "nodejs", "expressjs"],
+            "facts": [{
+                "title": "Downloads",
+                "value": "> 180.000"
+            }]
+        }
+    ],
+    "devices": [
+        {
+            "name": "imac",
+            "src": "/portfolio/images/imac.png",
+            "dimensions": [ 318, 281 ],
+            "frame": {
+                "pos": [14, 14],
+                "dimensions": [ 289, 164 ],
+                "aspect_ratio": "16 / 9"
+            }
+        },
+        {
+            "name": "macbook",
+            "src": "/portfolio/images/imac.png",
+            "dimensions": [ 318, 281 ],
+            "frame": {
+                "pos": [14, 14],
+                "dimensions": [ 289, 164 ],
+                "aspect_ratio": "16 / 9"
+            }
+        },
+        {
+            "name": "iphone",
+            "src": "/portfolio/images/iphone.png",
+            "dimensions": [ 90, 183 ],
+            "frame": {
+                "pos": [4, 3],
+                "dimensions": [ 82, 177 ],
+                "aspect_ratio": "16 / 9"
+            }
+        }
+    ],
+    "technologies": {
+        "docker": {
+            "display_name": "Docker",
+            "url": "https://www.docker.com/",
+            "fa_classes": ["fa-brands", "fa-docker"]
+        },
+        "vuejs": {
+            "display_name": "VueJS",
+            "url": "https://vuejs.org/",
+            "fa_classes": ["fa-brands", "fa-vuejs"]
+        },
+        "nodejs": {
+            "display_name": "NodeJS",
+            "url": "https://nodejs.org/en/",
+            "fa_classes": ["fa-brands", "fa-node"]
+        },
+        "expressjs": {
+            "display_name": "ExpressJS",
+            "url": "https://expressjs.com/en/",
+            "fa_classes": ["fa-brands", "fa-node-js"]
+        }
+    }
 }

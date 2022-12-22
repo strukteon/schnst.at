@@ -102,7 +102,7 @@ switchScreenLink.forEach(l => {
 VANTA.DOTS({
     el: "#background-dots",
     color: 0x555555,
-    backgroundColor: 0x111111,
+    backgroundColor: getComputedStyle(document.body).backgroundColor ,
     mouseControls: true,
     touchControls: false,
     gyroControls: false,

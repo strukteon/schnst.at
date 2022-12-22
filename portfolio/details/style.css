@@ -4,12 +4,39 @@
     margin: 2rem !important;
 }
 
-.anim-wrapper {
-    backdrop-filter: blur(0px) opacity(0);
+.image-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: brightness(100%) opacity(0);
     transition: backdrop-filter .5s ease;
+    z-index: -10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.anim-wrapper.overlay {
-    backdrop-filter: blur(4px) opacity(1);
+.image-overlay.visible {
+    backdrop-filter: brightness(50%) opacity(1);
+}
+.image-overlay button {
+    display: block;
+    border-color: white;
+    color: white;
+    font-size: 2rem;
+    background-color: transparent;
+    padding: 1rem;
+    margin: 1rem;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity .5s ease;
+}
+.image-overlay:not(.visible) button {
+    opacity: 0;
+}
+.image-overlay button.disabled {
+    color:rgba(255, 255, 255, .6);
 }
 
 .content {
@@ -79,12 +106,27 @@
     left: var(--device-frame-pos-x);
 }
 
-.image.focused-big {
+.image.focused-big {  
     transform: translateX(calc(50vw - 50%)) translateY(calc(50vh - 50%)) scale(var(--zoom-factor)) !important;
     top: 0 !important;
     left: 0 !important;
 }
-.aside .fact .fact-title {
+.technologies .value {
+    color: rgba(255, 255, 255, .8);
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+.technologies .value i {
+    width: 40px;
+    color:rgba(255, 255, 255, .6);
+}
+.technologies .value > * {
+    line-height: 1.8rem;
+    margin: 0;
+}
+.aside .fact .fact-title, .technologies .fact-title {
     color: rgba(255, 255, 255, .4);
     font-size: 1.2rem;
     font-weight: 800;
@@ -94,12 +136,13 @@
 .aside .fact .fact-value, .aside .fact .fact-value > * {
     margin: 0;
     color: rgba(255, 255, 255, .8);
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 800;
     text-transform: uppercase;
-    line-height: 1.5rem;
+    line-height: 1.75rem;
 }
 .aside .fact .fact-value {
+    transform: translateY(-12px);
 }
 
 .actions {

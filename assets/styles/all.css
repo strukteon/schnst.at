@@ -91,7 +91,7 @@ hr {
 }
 
 .footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     right: 0;
     display: flex;
@@ -102,10 +102,9 @@ hr {
 }
 
 .footer .copyright {
-    font-weight: 800;
+    font-weight: 300;
     font-size: 1.25rem;
     margin: 0;
-    text-transform: uppercase;
     color: rgba(0, 0, 0, .6);
 }
 

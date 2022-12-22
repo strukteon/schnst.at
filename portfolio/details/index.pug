@@ -2,20 +2,25 @@ extends ../../assets/layout/layout
 
 block append styles
     link(rel="stylesheet" href="/assets/styles/dark.css")
-    link(rel="stylesheet" href="style.css")
+    link(rel="stylesheet" href="/portfolio/details/style.css")
 
 block append scripts 
-    script(defer src="script.js")
+    script(defer src="/portfolio/details/script.js")
 
 
 block append anim-wrapper 
     #your-element-selector
 
 block append before-content 
-    a(href="../").go-back-btn.reverse-colors Go Back
+    a(href="/portfolio").go-back-btn.reverse-colors Go Back
 
 block content 
-    include ../projects
+    .image-overlay
+        button.button-left: i.fa-solid.fa-angle-left
+        button.button-right: i.fa-solid.fa-angle-right
+
+    if projects
+        - proj = projects[0]
 
     h2.project-title= proj.title
     h1.project-name= proj.name
@@ -46,16 +51,21 @@ block content
                         img.device(src=device.src)
 
         .aside
-            .fact
+            .technologies
                 .fact-title Technologies used
-                .fact-value 
-                    each tech in proj.technologies 
-                        p= tech
+                .value 
+                    - for (t_ in technologies) 
+                         each p_t in proj.technologies
+                            if t_ == p_t
+                                - let tech = technologies[t_]
+                                p
+                                    i(class=tech.fa_classes)
+                                    span= tech.display_name
 
             each fact in proj.facts 
-                .fact 
-                    .fact-title= fact.fact_title 
-                    .fact-value= fact.fact_value
+                .fact
+                    .fact-title= fact.title 
+                    .fact-value= fact.value
 
             .actions
                 a(href="https://github.com").reverse-colors visit GitHub
