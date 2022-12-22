@@ -6,7 +6,7 @@
 
 .anim-wrapper {
     backdrop-filter: blur(0px) opacity(0);
-    transition: all .5s ease;
+    transition: backdrop-filter .5s ease;
 }
 .anim-wrapper.overlay {
     backdrop-filter: blur(4px) opacity(1);
@@ -14,7 +14,7 @@
 
 .content {
     max-width: 1200px;
-    margin-top: 2rem;
+    margin-top: 4rem;
 }
 .project-title {
     text-transform: uppercase;
@@ -55,7 +55,6 @@
     display: block;
     width: 600px;
     height: 400px;
-    border: 1px white solid;
 }
 
 .image {
@@ -81,7 +80,7 @@
 }
 
 .image.focused-big {
-    transform: translateX(calc(50vw - 50%)) translateY(calc(50vh - 50%)) scale(2) !important;
+    transform: translateX(calc(50vw - 50%)) translateY(calc(50vh - 50%)) scale(var(--zoom-factor)) !important;
     top: 0 !important;
     left: 0 !important;
 }
@@ -101,7 +100,6 @@
     line-height: 1.5rem;
 }
 .aside .fact .fact-value {
-    transform: translateY(-12px);
 }
 
 .actions {

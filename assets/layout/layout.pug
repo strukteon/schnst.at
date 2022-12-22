@@ -7,12 +7,15 @@ html
             link(rel="stylesheet" href="/assets/styles/all.css")
 
         block scripts
+            script(defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js")
+            script(defer src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.dots.min.js")
             script(defer src="https://cdnjs.cloudflare.com/ajax/libs/mo-js/0.288.2/mo.min.js")
             script(defer src="/assets/scripts/all.js")
     body
         .anim-wrapper
             block anim-wrapper
                 .mouse-circle
+                #background-dots
 
         block before-content
 

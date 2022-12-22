@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "pug:watch": "npx pug -w .",
-    "pug:compile": "npx pug ."
+    "pug:watch": "npx pug -O data.json -w .",
+    "pug:compile": "npx pug -O data.json ."
   },
   "author": "",
   "license": "ISC",

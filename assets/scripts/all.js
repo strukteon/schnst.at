@@ -97,3 +97,18 @@ switchScreenLink.forEach(l => {
     .forEach(v => v.setAttribute("href", "mailto:" +
         v.getAttribute("href").split(":")[1]
         .split("").map(x => String.fromCharCode(x.charCodeAt() + 2)).join("")))
+
+
+VANTA.DOTS({
+    el: "#background-dots",
+    color: 0x555555,
+    backgroundColor: 0x111111,
+    mouseControls: true,
+    touchControls: false,
+    gyroControls: false,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    scale: 1.00,
+    scaleMobile: 1.00,
+    showLines: false
+})
