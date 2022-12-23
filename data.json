@@ -4,7 +4,7 @@
             "title": "Personal Homepage",
             "name": "strukteon.net",
             "path": "personal-homepage",
-            "description": "",
+            "description": "This project has a really elaborate description. Look at how it goes. Cute, isn't it? ",
             "date": {
                 "month": "August",
                 "year": "2020"
@@ -33,7 +33,7 @@
         {
             "title": "Online wineshop",
             "path": "online-wineshop",
-            "description": "",
+            "description": "Focused on local wineries, vinoshop aims to represent unknown winemakers online.",
             "date": {
                 "month": "2021 -",
                 "year": "2022"
@@ -63,7 +63,7 @@
         {
             "title": "Addon for Discord",
             "path": "addon-for-discord",
-            "description": "",
+            "description": "-todo",
             "date": {
                 "month": "February",
                 "year": "2018"
