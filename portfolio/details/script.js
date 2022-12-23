@@ -1,46 +1,43 @@
 let previewImagesDiv = document.querySelector(".preview-images");
 let previewImages = document.querySelectorAll(".preview-images .image");
 let imageOverlay = document.querySelector(".image-overlay");
+imageOverlay.childNodes.forEach(c => c.addEventListener("click", e => e.stopPropagation()));
 
-let previewImagesClones = []
+let previewImagesClones = [];
+let visible_index = -1;
+let [btn_prev, btn_next] = document.querySelectorAll(".image-overlay button");
 
 previewImages.forEach(image => {
     let clone = image.cloneNode(true);
-    previewImagesClones.push(clone)
-    let maxHeight = 0.9;
+    imageOverlay.appendChild(clone);
+    previewImagesClones.push(clone);
+
+    clone.style.setProperty("--device-scale", window.innerHeight * 0.9 / Number(clone.style.getPropertyValue("--device-height").split("px")[0]))
+    clone.addEventListener("click", e => e.stopPropagation())
+
     image.addEventListener("click", e => {
-        let boundingRect = image.getBoundingClientRect();
+        open_image_clone(clone);
+    });
+});
 
-        
-        document.body.appendChild(clone);
-        setImageClonePos(image, clone, 0);
-        clone.style.position = "fixed";
+addEventListener("resize", () => {
+    previewImagesClones.forEach(c => 
+        c.style.setProperty("--device-scale",
+          window.innerHeight * 0.9 / 
+          Number(c.style.getPropertyValue("--device-height") .split("px")[0])))
+});
 
-        return;
-        if (! image.classList.contains("focused-big")) {
-            
-        } else {
-            image.classList.remove("focused-big");
-            anim_wrapper.classList.remove("visible");
-            setTimeout(() => {
-                console.log(Number(image.getAttribute("data-index")))
-                previewImagesDiv.insertBefore(image, previewImagesDiv.childNodes[Number(image.getAttribute("data-index"))]);
-                image.style.position = null;
-                image.style.top = null;
-                image.style.left = null;
-                image.style.zIndex = null;
-                imageOverlay.style.zIndex = null;
-            }, 500);
-        }
-    })
+function open_image_clone(imgc) {
+    imageOverlay.classList.add("visible");
+    previewImagesClones.forEach(n => n.classList.remove("is-visible"));
+    imgc.classList.add("is-visible");
+    visible_index = previewImagesClones.indexOf(imgc);
+    btn_prev.disabled = visible_index == 0;
+    btn_next.disabled = visible_index == previewImagesClones.length - 1;
+}
+imageOverlay.addEventListener("click", () => {
+    imageOverlay.classList.remove("visible");
 })
 
-
-let tween = (start, end, progress) => start + (end - start) * progress;
-
-function setImageClonePos(orig, clone, progress) {
-    let boundingRect = orig.getBoundingClientRect();
-    let max_scale = (window.innerHeight * .9) / boundingRect.height;
-    clone.style.top = tween(boundingRect.top, window.innerHeight / 2 - boundingRect.height * max_scale / 2)  + "px";
-    clone.style.left = boundingRect.left + "px";
-}
+btn_prev.addEventListener("click", e => open_image_clone(previewImagesClones[visible_index - 1]));
+btn_next.addEventListener("click", e => open_image_clone(previewImagesClones[visible_index + 1]));

@@ -27,12 +27,13 @@
             "technologies": ["docker", "vuejs", "nodejs", "expressjs"],
             "facts": [{
                 "title": "Vistors in last year",
-                "value": "~ 500.000"
+                "value": "~ 50.000"
             }]
         },
         {
             "title": "Online wineshop",
             "path": "online-wineshop",
+            "description": "",
             "date": {
                 "month": "2021 -",
                 "year": "2022"
@@ -62,6 +63,7 @@
         {
             "title": "Addon for Discord",
             "path": "addon-for-discord",
+            "description": "",
             "date": {
                 "month": "February",
                 "year": "2018"
@@ -130,6 +132,7 @@
             "frame": {
                 "pos": [4, 3],
                 "dimensions": [ 82, 177 ],
+                "radius": 8,
                 "aspect_ratio": "16 / 9"
             }
         }
@@ -141,19 +144,40 @@
             "fa_classes": ["fa-brands", "fa-docker"]
         },
         "vuejs": {
-            "display_name": "VueJS",
             "url": "https://vuejs.org/",
             "fa_classes": ["fa-brands", "fa-vuejs"]
         },
         "nodejs": {
-            "display_name": "NodeJS",
             "url": "https://nodejs.org/en/",
             "fa_classes": ["fa-brands", "fa-node"]
         },
         "expressjs": {
-            "display_name": "ExpressJS",
             "url": "https://expressjs.com/en/",
             "fa_classes": ["fa-brands", "fa-node-js"]
+        },
+        "php": {
+            "url": "#",
+            "fa_classes": ["fa-brands", "fa-php"]
+        },
+        "javascript": {
+            "url": "#",
+            "fa_classes": ["fa-brands", "fa-node-js"]
+        },
+        "shopware": {
+            "url": "#",
+            "fa_classes": ["fa-brands", "fa-shopware"]
+        },
+        "symfony": {
+            "url": "#",
+            "fa_classes": ["fa-brands", "fa-symfony"]
+        },
+        "java": {
+            "url": "#",
+            "fa_classes": ["fa-brands", "fa-java"]
+        },
+        "javafx": {
+            "url": "#",
+            "fa_classes": ["fa-brands", "fa-java"]
         }
     }
 }

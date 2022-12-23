@@ -4,41 +4,6 @@
     margin: 2rem !important;
 }
 
-.image-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    backdrop-filter: brightness(100%) opacity(0);
-    transition: backdrop-filter .5s ease;
-    z-index: -10;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.image-overlay.visible {
-    backdrop-filter: brightness(50%) opacity(1);
-}
-.image-overlay button {
-    display: block;
-    border-color: white;
-    color: white;
-    font-size: 2rem;
-    background-color: transparent;
-    padding: 1rem;
-    margin: 1rem;
-    cursor: pointer;
-    opacity: 1;
-    transition: opacity .5s ease;
-}
-.image-overlay:not(.visible) button {
-    opacity: 0;
-}
-.image-overlay button.disabled {
-    color:rgba(255, 255, 255, .6);
-}
-
 .content {
     max-width: 1200px;
     margin-top: 4rem;
@@ -90,7 +55,7 @@
     height: var(--device-height);
     top: var(--device-pos-y);
     left: var(--device-pos-x);
-    transform: scale(1) translateX(0) translateY(0);
+    transform: scale(var(--device-scale)) translateX(0) translateY(0);
     transition: all .5s ease;
 }
 .image .device {
@@ -104,12 +69,7 @@
     height: var(--device-frame-height);
     top: var(--device-frame-pos-y);
     left: var(--device-frame-pos-x);
-}
-
-.image.focused-big {  
-    transform: translateX(calc(50vw - 50%)) translateY(calc(50vh - 50%)) scale(var(--zoom-factor)) !important;
-    top: 0 !important;
-    left: 0 !important;
+    border-radius: var(--device-frame-radius);
 }
 .technologies .value {
     color: rgba(255, 255, 255, .8);
@@ -150,4 +110,54 @@
 }
 .actions > * {
     margin: 1rem !important;
+}
+
+
+
+.image-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: brightness(50%);
+    transition: opacity .2s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    pointer-events: none;
+    opacity: 0;
+}
+.image-overlay.visible {
+    opacity: 1;
+    pointer-events: unset;
+}
+.image-overlay button {
+    display: block;
+    color: rgba(255, 255, 255, .8);
+    border-color: transparent;
+    font-size: 2rem;
+    background-color: transparent;
+    padding: 1rem;
+    margin: 1rem;
+    cursor: pointer;
+    opacity: 1;
+    transition: color .2s ease;
+}
+.image-overlay button:not([disabled]):hover {
+    color: white;
+}
+.image-overlay button[disabled] {
+    color:rgba(255, 255, 255, .3);
+    cursor: default;
+    border-color: transparent;
+}
+.image-overlay .image {
+    top: 0;
+    left: 0;
+    transform: translateX(calc(50vw - 50%)) translateY(calc(50vh - 50%)) scale(var(--device-scale));
+}
+.image-overlay .image:not(.is-visible) {
+    display: none;
 }

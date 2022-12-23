@@ -44,6 +44,7 @@ block content
                         --device-frame-pos-y: ${device.frame.pos[1]}px;\
                         --device-frame-width: ${device.frame.dimensions[0]}px;\
                         --device-frame-height: ${device.frame.dimensions[1]}px;\
+                        --device-frame-radius: ${device.frame.radius}px;\
                         --device-frame-aspect-ratio: ${device.frame.aspect_ratio};\
                         `
                     )
@@ -60,7 +61,7 @@ block content
                                 - let tech = technologies[t_]
                                 p
                                     i(class=tech.fa_classes)
-                                    span= tech.display_name
+                                    span= p_t
 
             each fact in proj.facts 
                 .fact
@@ -68,5 +69,7 @@ block content
                     .fact-value= fact.value
 
             .actions
-                a(href="https://github.com").reverse-colors visit GitHub
-                a(href="https://github.com").reverse-colors visit project page
+                if proj.code_url
+                    a(href=proj.code_url).reverse-colors visit GitHub
+                if proj.url
+                    a(href=proj.url).reverse-colors visit project page

@@ -75,6 +75,7 @@ let switchScreenLink = document.querySelectorAll("a.switch-screen");
 
 switchScreenLink.forEach(l => {
     l.addEventListener("click", e => {
+        e.preventDefault();
 
         new mojs.Shape({
             parent: anim_wrapper,
@@ -87,7 +88,8 @@ switchScreenLink.forEach(l => {
             easing: 'bounce.out',
             duration: 1000,
             onComplete: function () {
-                window.location.href = l.href;
+               window.location.href = l.href;
+               //this.el.parentNode.removeChild(this.el);
             }
         }).play();
     })
@@ -97,7 +99,9 @@ switchScreenLink.forEach(l => {
     .forEach(v => v.setAttribute("href", "mailto:" +
         v.getAttribute("href").split(":")[1]
         .split("").map(x => String.fromCharCode(x.charCodeAt() + 2)).join("")))
-
+addEventListener("unload", e => {
+    document.querySelectorAll(".anim-wrapper [data-name='mojs-shape']").forEach(c => anim_wrapper.removeChild(c))
+})
 
 VANTA.DOTS({
     el: "#background-dots",

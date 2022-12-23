@@ -43,7 +43,7 @@ a.button {
     border-radius: 999px;
 }
 
-.anim-wrapper {
+.anim-wrapper, .background-wrapper {
     position: fixed;
     top: 0;
     left: 0;

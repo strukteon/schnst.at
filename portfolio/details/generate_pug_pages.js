@@ -12,5 +12,11 @@ for (let proj of data["projects"]) {
         fs.mkdirSync(__dirname + `/${proj.path}`, { recursive: true });
     }
 
-    fs.writeFile(__dirname + `/${proj.path}/index.html`, compiledFunction({proj, devices: data["devices"]}), console.log)
+    let proj_data = {
+        proj,
+        devices: data["devices"],
+        technologies: data["technologies"]
+    }
+
+    fs.writeFile(__dirname + `/${proj.path}/index.html`, compiledFunction(proj_data), console.log)
 }
