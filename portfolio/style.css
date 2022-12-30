@@ -1,6 +1,6 @@
 .title::before {
     color: #eee;
-    font-size: 3rem;
+    font-size: calc(min(5rem, 17vw) * 0.6);
     position: absolute;
     pointer-events: none;
     content: 'Portfolio';
@@ -10,10 +10,11 @@
 }
 .title {
     color: rgba(255, 255, 255, .15);
-    font-size: 5rem;
+    font-size: min(5rem, 17vw);
     content: 'Portfolio';
     position: relative;
     font-weight: 800;
+    margin-bottom: 0;
 }
 
 .projects {
@@ -21,7 +22,7 @@
     flex-wrap: wrap;
     justify-content: center;
     position: relative;
-    margin-top: 3rem;
+    margin-top: min(3rem, 5vw);
 }
 .top-part {
     max-width: 900px;
@@ -41,7 +42,7 @@
 .project {
     position: relative;
     aspect-ratio: 16 / 9;
-    height: 200px;
+    width: 350px;
     margin: 1rem;
     cursor: pointer;
     overflow: hidden;
@@ -54,8 +55,8 @@
 }
 .project .background .logo {
     position: absolute;
-    height: 10rem;
-    width: 10rem;
+    aspect-ratio: 1 / 1;
+    width: 40%;
     bottom: 0;
     right: 0;
 }

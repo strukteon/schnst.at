@@ -20,7 +20,7 @@
 .project-name {
     text-transform: uppercase;
     font-weight: 800;
-    font-size: 2.75rem;
+    font-size: min(2.75rem, 10vw);
     margin: 0;
     line-height: 2.25rem;
 }
@@ -43,10 +43,15 @@
 }
 
 .preview-images {
+    --scale: calc(min(600, calc(var(--window-width) * 0.9)) / 600);
     position: relative;
     display: block;
+    aspect-ratio: 3 / 2;
     width: 600px;
-    height: 400px;
+    height: calc(400px);
+    transform: scale(var(--scale));
+    margin-top: calc(calc(var(--scale) - 1) * 10rem);
+    margin-bottom: calc(calc(var(--scale) - 1) * 8rem);
 }
 
 .image {
@@ -106,7 +111,8 @@
 }
 
 .actions {
-    margin-top: 3rem;
+    margin-top: min(3rem, 4vw);
+    margin-bottom: 3rem;
 }
 .actions > * {
     margin: 1rem !important;
