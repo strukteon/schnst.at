@@ -5,13 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "npm run pug:compile && npm run generate:static_pages",
+    "generate:static_pages": "node portfolio/details/generate_pug_pages.js",
     "pug:watch": "npx pug -O data.json -w .",
     "pug:compile": "npx pug -O data.json ."
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "pug-cli": "^1.0.0-alpha6",
-    "pug": "^3.0.2"
+    "jstransformer-markdown-it": "^3.0.0",
+    "pug": "^3.0.2",
+    "pug-cli": "^1.0.0-alpha6"
   }
 }

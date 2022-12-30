@@ -16,10 +16,11 @@ block content
     .projects: each proj in projects
         - let href_url = proj["is_link"] ? proj.url : "details/" + proj.path
         a(href=href_url).project.no-hover-effect.screen-transition
-            if proj.preview_img_url
-                img(src=proj.preview_img_url).background-image
-            else
-                img(src="https://via.placeholder.com/400x300/eeeeee").background-image
+            .background(style=`--logo-color: ${proj.logo_color}`)
+                if proj.logo_url
+                    img(src=proj.logo_url).logo
+                else
+                    .logo ?
 
             .text-overlay
                 each tech in proj.technologies

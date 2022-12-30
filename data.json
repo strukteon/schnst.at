@@ -4,7 +4,9 @@
             "title": "Personal Homepage",
             "name": "strukteon.net",
             "path": "personal-homepage",
-            "description": "This project has a really elaborate description. Look at how it goes. Cute, isn't it? ",
+            "logo_url": "/portfolio/images/strukteon-net/logo.png",
+            "logo_color": "#17a2b8",
+            "description": "strukteon.net is the place where my personal projects are published.",
             "date": {
                 "month": "August",
                 "year": "2020"
@@ -13,15 +15,20 @@
             "preview_img_url": "/portfolio/images/homepage_image1.png",
             "images": [
                 {
-                    "src": "/portfolio/images/gradient.jpg",
+                    "src": "/portfolio/images/strukteon-net/desktop.png",
                     "type": "imac",
                     "device_pos": [ 141, 60 ],
                     "device_scale": 1.2
                 },{
-                    "src": "/portfolio/images/gradient.jpg",
+                    "src": "/portfolio/images/strukteon-net/mobile.png",
                     "type": "iphone",
-                    "device_pos": [ 100, 150 ],
+                    "device_pos": [ 20, 160 ],
                     "device_scale": 1.2
+                },{
+                    "src": "/portfolio/images/strukteon-net/laptop.png",
+                    "type": "macbook",
+                    "device_pos": [ 340, 194 ],
+                    "device_scale": 1.4
                 }
             ],
             "technologies": ["docker", "vuejs", "nodejs", "expressjs"],
@@ -33,7 +40,9 @@
         {
             "title": "Online wineshop",
             "path": "online-wineshop",
-            "description": "Focused on local wineries, vinoshop aims to represent unknown winemakers online.",
+            "logo_url": "/portfolio/images/vinoshop/logo.png",
+            "logo_color": "#B20038",
+            "description": "Focused on local wineries, vinoshop aims to represent unknown winemakers online.<br>This project was a part of my high school diploma thesis, where I was responsible of the following topics: <ul><li>management of server & infrastructure</li><li>website design & implementation</li></ul>",
             "date": {
                 "month": "2021 -",
                 "year": "2022"
@@ -42,14 +51,14 @@
             "preview_img_url": "/portfolio/images/vinoshop_image1.png",
             "images": [
                 {
-                    "src": "/portfolio/images/gradient.jpg",
+                    "src": "/portfolio/images/vinoshop/desktop.png",
                     "type": "imac",
                     "device_pos": [ 141, 60 ],
                     "device_scale": 1.2
                 },{
-                    "src": "/portfolio/images/gradient.jpg",
+                    "src": "/portfolio/images/vinoshop/mobile.png",
                     "type": "iphone",
-                    "device_pos": [ 100, 150 ],
+                    "device_pos": [ 20, 160 ],
                     "device_scale": 1.2
                 }
             ],
@@ -63,7 +72,9 @@
         {
             "title": "Addon for Discord",
             "path": "addon-for-discord",
-            "description": "-todo",
+            "logo_url": "/portfolio/images/myrpc/logo.png",
+            "logo_color": "#7289DA",
+            "description": "Started back in 2018, MyRichPresence is an addon for discord to extend user features. It communicates with the discord API over RPC to show a more detailed status message.",
             "date": {
                 "month": "February",
                 "year": "2018"
@@ -72,14 +83,9 @@
             "preview_img_url": "/portfolio/images/myrpc_image1.png",
             "images": [
                 {
-                    "src": "/portfolio/images/gradient.jpg",
+                    "src": "/portfolio/images/myrpc/desktop.png",
                     "type": "imac",
                     "device_pos": [ 141, 60 ],
-                    "device_scale": 1.2
-                },{
-                    "src": "/portfolio/images/gradient.jpg",
-                    "type": "iphone",
-                    "device_pos": [ 100, 150 ],
                     "device_scale": 1.2
                 }
             ],
@@ -93,6 +99,8 @@
         },
         {
             "title": "More Projects on",
+            "logo_url": "/portfolio/images/github-logo.png",
+            "logo_color": "#171515",
             "name": "GitHub",
             "date": {
                 "month": "since",
@@ -117,11 +125,11 @@
         },
         {
             "name": "macbook",
-            "src": "/portfolio/images/imac.png",
-            "dimensions": [ 318, 281 ],
+            "src": "/portfolio/images/macbook.png",
+            "dimensions": [ 222, 146 ],
             "frame": {
-                "pos": [14, 14],
-                "dimensions": [ 289, 164 ],
+                "pos": [25, 7],
+                "dimensions": [ 172, 106 ],
                 "aspect_ratio": "16 / 9"
             }
         },

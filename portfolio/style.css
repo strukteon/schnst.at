@@ -46,10 +46,18 @@
     cursor: pointer;
     overflow: hidden;
 }
-.project .background-image {
-    object-fit: cover;
+.project .background {
     height: 100%;
     width: 100%;
+    position: relative;
+    background-color: var(--logo-color);
+}
+.project .background .logo {
+    position: absolute;
+    height: 10rem;
+    width: 10rem;
+    bottom: 0;
+    right: 0;
 }
 
 .project .text-overlay {
