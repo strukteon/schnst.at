@@ -1,1 +1,7 @@
-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
+# Personal Homepage
+
+This is my personal homepage using pug.
+
+---
+
+You can compile this page by running ``npm run compile``.
