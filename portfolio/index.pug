@@ -20,7 +20,7 @@ block content
         a(href=href_url).project.no-hover-effect.screen-transition
             .background(style=`--logo-color: ${proj.logo_color}`)
                 if proj.logo_url
-                    img(src=proj.logo_url).logo
+                    img(src=proj.logo_url alt=("Logo of " + proj.name)).logo
                 else
                     .logo ?
 
