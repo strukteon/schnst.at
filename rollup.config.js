@@ -9,7 +9,8 @@ export default {
     input: 'assets/scripts/all.js',
     output: {
         file: "assets/scripts/all.bundle.js",
-        format: 'cjs'
+        format: 'cjs',
+        sourcemap: true
     },
     plugins: [
         nodeResolve(),
