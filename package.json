@@ -9,7 +9,7 @@
     "generate:static_pages": "node portfolio/details/generate_pug_pages.js",
     "pug:watch": "npx pug -O data.json -w .",
     "pug:compile": "npx pug -O data.json .",
-    "rollup": " rollup --config rollup.config.js"
+    "rollup": "npx rollup --config rollup.config.js"
   },
   "author": "",
   "license": "ISC",
