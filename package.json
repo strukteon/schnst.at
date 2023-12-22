@@ -5,16 +5,26 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile": "npm run pug:compile && npm run generate:static_pages",
+    "compile": "npm run pug:compile && npm run generate:static_pages && npm run rollup",
     "generate:static_pages": "node portfolio/details/generate_pug_pages.js",
     "pug:watch": "npx pug -O data.json -w .",
-    "pug:compile": "npx pug -O data.json ."
+    "pug:compile": "npx pug -O data.json .",
+    "rollup": " rollup --config rollup.config.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@mojs/core": "^1.7.1",
     "jstransformer-markdown-it": "^3.0.0",
+    "three": "^0.159.0",
+    "vanta": "^0.5.24"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
     "pug": "^3.0.2",
-    "pug-cli": "^1.0.0-alpha6"
+    "pug-cli": "^1.0.0-alpha6",
+    "rollup": "latest",
+    "rollup-plugin-terser": "^7.0.2"
   }
 }

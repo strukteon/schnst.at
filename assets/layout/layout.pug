@@ -4,7 +4,7 @@ html
         block meta
             meta(name="viewport" content="width=device-width, initial-scale=1")
             meta(charset="UTF-8")
-
+            meta(http-equiv="content-language" content="en")
 
         block styles
             link(rel="stylesheet" href="/assets/styles/googlefonts.min.css")
@@ -12,10 +12,7 @@ html
             link(rel="stylesheet" href="/assets/styles/all.css")
 
         block scripts
-            script(defer src="/assets/scripts/three.min.js")
-            script(defer src="/assets/scripts/vanta.dots.min.js")
-            script(defer src="/assets/scripts/mo.min.js")
-            script(defer src="/assets/scripts/all.js")
+            script(defer src="/assets/scripts/all.bundle.js")
     body
         .background-wrapper
             #background-dots

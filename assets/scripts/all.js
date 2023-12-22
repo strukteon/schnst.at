@@ -1,3 +1,7 @@
+import mojs from '@mojs/core';
+import * as THREE from "three";
+import vantaDots from './vanta/vanta.dots';
+
 let anim_wrapper = document.querySelector(".anim-wrapper");
 
 let mouse_x = 0,
@@ -103,7 +107,8 @@ addEventListener("unload", e => {
     document.querySelectorAll(".anim-wrapper [data-name='mojs-shape']").forEach(c => anim_wrapper.removeChild(c))
 })
 
-VANTA.DOTS({
+vantaDots({
+    THREE: THREE,
     el: "#background-dots",
     color: 0x555555,
     backgroundColor: getComputedStyle(document.body).backgroundColor ,
