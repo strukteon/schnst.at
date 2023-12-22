@@ -1,4 +1,5 @@
 let screenTransitionLink = document.querySelectorAll("a.screen-transition");
+let anim_wrapper = document.querySelector(".anim-wrapper");
 
 screenTransitionLink.forEach(l => {
     l.addEventListener("click", e => {
