@@ -1,5 +1,12 @@
 extends ../../assets/layout/layout
 
+
+block append meta
+    if projects
+        - proj = projects[0]
+    title= proj.name + " - schnst.at"
+    meta(name="robots" content="noindex")
+
 block append styles
     link(rel="stylesheet" href="/assets/styles/dark.css")
     link(rel="stylesheet" href="/portfolio/details/style.css")
