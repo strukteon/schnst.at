@@ -1,0 +1,20 @@
+mixin cookiecontent
+    h3 Cookies?
+    p.description We use analytics to improve the quality of the webpage. #[a.reverse-colors(href="/legal/cookie-policy/") Learn more]
+    div.cookie-buttons
+        button.accept Accept
+        button.decline Decline
+
+div.cookie-banner-wrapper-wrapper
+    div.cookie-banner-wrapper.hidden
+        .cookie-anim-wrapper
+            .breakable.half1
+                .cookie-content
+                    +cookiecontent
+                .background
+            .breakable.half2
+                .cookie-content
+                    +cookiecontent
+                .background
+        div.cookie-banner
+            +cookiecontent
