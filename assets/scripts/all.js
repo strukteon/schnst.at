@@ -103,7 +103,7 @@ switchScreenLink.forEach(l => {
     .forEach(v => v.setAttribute("href", "mailto:" +
         v.getAttribute("href").split(":")[1]
         .split("").map(x => String.fromCharCode(x.charCodeAt() + 2)).join("")))
-addEventListener("unload", e => {
+addEventListener("pagehide", e => {
     document.querySelectorAll(".anim-wrapper [data-name='mojs-shape']").forEach(c => anim_wrapper.removeChild(c))
 })
 
