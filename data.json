@@ -2,6 +2,7 @@
     "projects": [
         {
             "title": "Personal Homepage",
+            "project_type_heading": "Web Projects",
             "name": "strukteon.net",
             "path": "personal-homepage",
             "logo_url": "/portfolio/images/strukteon-net/logo.png",
@@ -39,10 +40,11 @@
         },
         {
             "title": "Online wineshop",
+            "project_type_heading": "Web Projects",
             "path": "online-wineshop",
             "logo_url": "/portfolio/images/vinoshop/logo.png",
             "logo_color": "#B20038",
-            "description": "Focused on local wineries, vinoshop aims to represent unknown winemakers online.<br>This project was a part of my high school diploma thesis, where I was responsible of the following topics: <ul><li>management of server & infrastructure</li><li>website design & implementation</li></ul>",
+            "description": "Focused on local wineries, vinoshop aims to represent unknown winemakers online.<br>This project was a part of my high school diploma thesis, where I was responsible for the following topics: <ul><li>management of server & infrastructure</li><li>website design & implementation</li></ul>",
             "date": {
                 "month": "2021 -",
                 "year": "2022"
@@ -71,6 +73,7 @@
         },
         {
             "title": "Addon for Discord",
+            "project_type_heading": "Other",
             "path": "addon-for-discord",
             "logo_url": "/portfolio/images/myrpc/logo.png",
             "logo_color": "#7289DA",
@@ -99,6 +102,7 @@
         },
         {
             "title": "More Projects on",
+            "project_type_heading": "Other",
             "logo_url": "/portfolio/images/github-logo.png",
             "logo_color": "#171515",
             "name": "GitHub",
@@ -186,6 +190,15 @@
         "javafx": {
             "url": "#",
             "fa_classes": ["fa-brands", "fa-java"]
+        },
+        "flutter": {
+            "url": "#",
+            "fa_classes": ["fa-brands", "fa-java"]
+        },
+        "dart": {
+            "url": "#",
+            "fa_classes": ["fa-brands", "fa-java"]
         }
-    }
+    },
+    "project_category_order": ["Web Projects", "Other"]
 }

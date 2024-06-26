@@ -39,6 +39,27 @@
     box-sizing: border-box;
 }
 
+.project-type-heading {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 2rem;
+    color: rgba(255, 255, 255, .8);
+    letter-spacing: .05rem;
+}
+
+h3.project-type-heading::before {
+    width: 8px;
+    height: 2.5rem;
+    background-color: rgba(255, 255, 255, .9);
+    display: inline-block;
+    content: "";
+    margin-right: 1rem;
+    transform: translateY(25%);
+    position: relative;
+    /* bottom: 0; */
+    left: 0;
+}
+
 .project {
     position: relative;
     aspect-ratio: 16 / 9;
@@ -51,7 +72,7 @@
     height: 100%;
     width: 100%;
     position: relative;
-    background-color: var(--logo-color);
+    /*background-color: var(--logo-color);*/
 }
 .project .background .logo {
     position: absolute;

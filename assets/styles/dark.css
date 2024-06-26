@@ -3,10 +3,39 @@ body {
     color: #eee;
 }
 
+a:not(.no-hover-effect) {
+    color: #eee;
+    border-bottom: 2px solid #eee;
+}
+
+a:not(.no-hover-effect).reverse-colors {
+    color: #111;
+    background-color: #eee;
+    border-bottom-color: #111;
+}
+
+a:not(.no-hover-effect) .hover-elem {
+    background-color: #eee;
+    color: #111;
+}
+
+a:not(.no-hover-effect).reverse-colors .hover-elem {
+    color: #eee;
+    background-color: #111;
+}
+
 .anim-wrapper .mouse-circle {
     background-color: #eee;
 }
 
-.footer .copyright {
+.footer, .footer a {
     color: rgba(255, 255, 255, .4);
+}
+.footer a {
+    border-bottom-color: rgba(255, 255, 255, .4);
+}
+
+.footer a .hover-elem {
+    background-color: rgba(255, 255, 255, .4);
+    color: #111;
 }

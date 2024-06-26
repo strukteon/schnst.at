@@ -14,20 +14,22 @@ block content
     .top-part
         h1.title Portfolio
 
+    .project-group: each proj_type in project_category_order
+        h3.project-type-heading(id=proj_type.toLowerCase().replace(" ", "-"))= proj_type
 
-    .projects: each proj in projects
-        - let href_url = proj["is_link"] ? proj.url : "details/" + proj.path
-        a(href=href_url).project.no-hover-effect.screen-transition
-            .background(style=`--logo-color: ${proj.logo_color}`)
-                if proj.logo_url
-                    img(src=proj.logo_url alt=("Logo of " + proj.name)).logo
-                else
-                    .logo ?
+        .projects: each proj in projects.filter(p => p.project_type_heading === proj_type)
+            - let href_url = proj["is_link"] ? proj.url : "details/" + proj.path + "/"
+            a(href=href_url).project.no-hover-effect.screen-transition
+                .background(style=`--logo-color: ${proj.logo_color}`)
+                    if proj.logo_url
+                        img(src=proj.logo_url alt=("Logo of " + proj.name)).logo
+                    else
+                        .logo ?
 
-            .text-overlay
-                each tech in proj.technologies
-                    .line= tech
+                .text-overlay
+                    each tech in proj.technologies
+                        .line= tech
 
-            .name-overlay
-                p.proj-title= proj.title
-                p.proj-name= proj.name
+                .name-overlay
+                    p.proj-title= proj.title
+                    p.proj-name= proj.name

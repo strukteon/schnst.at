@@ -2,6 +2,9 @@ import mojs from '@mojs/core';
 import * as THREE from "three";
 import vantaDots from './vanta/vanta.dots';
 
+import "./analytics";
+import "./cookie-banner";
+
 let anim_wrapper = document.querySelector(".anim-wrapper");
 
 let mouse_x = 0,
